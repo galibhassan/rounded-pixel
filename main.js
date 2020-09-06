@@ -24,13 +24,11 @@ saveButton.addEventListener("click", (e)=> {
     .then(canvasOut => {
         const downloadLink = document.createElement("a")
         downloadLink.href = canvasOut.toDataURL();
-        downloadLink.download = "rounded-pixel_art.png";
+        downloadLink.download = document.querySelector(".save-png-filename").value;
         downloadLink.click()
 
     });
 })
-
-
 
 const saveLossless_button = document.getElementById("saveLossless_button")
 saveLossless_button.addEventListener("click", (e)=>{
