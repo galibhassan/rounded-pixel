@@ -5,6 +5,8 @@ class Utils {
      * @param {String} rgb of the form rgb(235, 0, 0)
      */
     static rgb2nrgb(_rgb) {
+        if (!_rgb) return;
+        
         const rgb = _rgb.toString()
         const csvString = rgb.split("rgb")[1].split("(")[1].split(")")[0]
         const csvStringUntrimmed = csvString.split(",")

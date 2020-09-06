@@ -2,61 +2,86 @@ class Board {
     constructor(parentDiv, store) {
         this.globalStore = store;
         this.parentDiv = parentDiv;
-        this.addRowsToBoard()
+        this.cellWidth = 10;
+        this.cellHeight = 10;
+        // this.borderRadius = parseInt(this.cellWidth*0.25)+1;
+        this.cellMargin = 1;
 
         this._enableEventListeners(this.parentDiv)
-
+        
         this.dragging = false;
         this.pointerdown = false;
         this.drawable = false;
         
+        this.addRowsToBoard()
+        // this.getD()
     }
 
-    getPixRow(rowIndex){
+    getPixRow(rowIndex) {
         const row = document.createElement("div")
+        row.style.display = "flex";
+        row.style.flexDirection = "row";
+
         row.classList.add("pixel-row")
-        for (let j=0; j<45; j++) {
-            const rPixel = new RoundedPixel(this.globalStore, this, `${rowIndex}_${j}`, 10, 10, "", 3)
+        for (let j = 0; j < this.getDim().nRows; j++) {
+            const rPixel = new RoundedPixel(
+                this.globalStore, 
+                this, 
+                `${rowIndex}_${j}`, 
+                this.cellWidth, 
+                this.cellHeight, 
+                null, 
+                this.borderRadius
+            );
             row.appendChild(rPixel.getPixel())
         }
         return row;
-        
+
     }
-    
-    addRowsToBoard(){
-        for (let i=0; i<26; i++) {
+
+
+    addRowsToBoard() {
+        for (let i = 0; i < this.getDim().nCols; i++) {
             let row = this.getPixRow(i)
             this.parentDiv.appendChild(row)
         }
     }
 
-    handleBoardResize(){
-        
+    getDim() {
+        const w = this.parentDiv.offsetWidth
+        const h = this.parentDiv.offsetHeight
+        return {
+            nRows: parseInt(w / (this.cellWidth + 2 * this.cellMargin)),
+            nCols: parseInt(h / (this.cellHeight + 2 * this.cellMargin))
+        }
+    }
+    handleBoardResize() {
+
     }
 
 
-    _enableEventListeners(domRef){
-        domRef.addEventListener('pointerdown', (e)=>{
+    _enableEventListeners(domRef) {
+        domRef.addEventListener('pointerdown', (e) => {
             e.preventDefault()
             this.pointerdown = true;
         })
-        
-        domRef.addEventListener("pointerup", (e)=>{
+
+        domRef.addEventListener("pointerup", (e) => {
             e.preventDefault()
             this.pointerdown = false
         })
-        domRef.addEventListener('pointermove', (e)=>{
+        domRef.addEventListener('pointermove', (e) => {
             e.preventDefault()
             this.pointermove = true
         })
-        
+
     }
 
-    draw(){
-        if(!this.pointerdown) {
+    draw() {
+        if (!this.pointerdown) {
             this.drawable = false;
         }
-        else if(this.pointerdown && this.pointermove) {
+        else if (this.pointerdown && this.pointermove) {
             //console.log('drawable')
             this.drawable = true;
         } else {

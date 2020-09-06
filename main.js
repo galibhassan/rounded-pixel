@@ -16,6 +16,10 @@ const saveButton = document.getElementById("saveButton");
 saveButton.addEventListener("click", (e)=> {
     html2canvas(canvas, {backgroundColor: null})
     .then(canvasOut => {
-        document.body.appendChild(canvasOut)
+        const downloadLink = document.createElement("a")
+        downloadLink.href = canvasOut.toDataURL();
+        downloadLink.download = "rounded-pixel_art.png";
+        downloadLink.click()
+
     });
 })

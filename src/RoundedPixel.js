@@ -22,7 +22,7 @@ class RoundedPixel {
         px.style.backgroundColor = this.backgroundColor;
         px.style.borderRadius = this.borderRadius + "px";
         px.setAttribute("data-pxid", this.pxid);
-        px.style.display = "inline-block"
+        // px.style.display = "inline-block"
         this._enableEventListeners(px)
         return px;
     }
