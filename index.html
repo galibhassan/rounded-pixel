@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
-<body ondrag="return false;" ondrop="return false" >
+<body ondragstart="return false;">
     <h2>Rounded Pixels</h2>
     <div class="container">
         <div class="colorPickerWraper">
@@ -24,6 +24,7 @@
         save
     </button>
 
+    <script src="./src/utils.js"></script>
     <script src="./src/RoundedPixel.js"></script>
     <script src="./src/board.js"></script>
     <script src="./src/store.js"></script>

@@ -9,7 +9,7 @@ class RoundedPixel {
         this.pxid = pxid;
         this.board = board;
 
-        this.altKeyDown = false;
+        this.eyeDropperEnabled = false;
     }
 
     getPixel() {
@@ -41,7 +41,7 @@ class RoundedPixel {
     }
 
     _enableEventListeners(domRef) {
-        domRef.addEventListener('mouseover', (e) => {
+        domRef.addEventListener('pointerover', (e) => {
             {
                 e.preventDefault()
                 if (this.board.drawable) {
@@ -50,34 +50,34 @@ class RoundedPixel {
                 }
             }
         });
-        domRef.addEventListener('mousedown', (e) => {
+        domRef.addEventListener('pointerdown', (e) => {
             {
                 e.preventDefault()
-                if (!this.altKeyDown) {
+                if (!this.eyeDropperEnabled) {
                     const currentColor = this.globalStore.getCurrentColor()
                     this.setColor(currentColor)
                 } else {
                     // pick color
                     const pickedColor = domRef.style.backgroundColor;
-                    console.log(pickedColor)
-                    this.globalStore.setColor(pickedColor)
+                    const {nrgb, hex} = Utils.rgb2nrgb(pickedColor)
+                    this.globalStore.setColor(hex)
 
                 }
             }
         });
 
         document.body.addEventListener('keydown', (e) => {
-            e.preventDefault()
+            // e.preventDefault()
             if (e.key === "Alt") {
-                this.altKeyDown = true;
+                this.eyeDropperEnabled = true;
             } else {
-                this.altKeyDown = false;
+                this.eyeDropperEnabled = false;
             }
         })
 
         document.body.addEventListener('keyup', (e) => {
             e.preventDefault()
-            this.altKeyDown = false;
+            this.eyeDropperEnabled = false;
         })
 
 

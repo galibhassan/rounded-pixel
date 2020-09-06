@@ -7,7 +7,7 @@ class Board {
         this._enableEventListeners(this.parentDiv)
 
         this.dragging = false;
-        this.mousedown = false;
+        this.pointerdown = false;
         this.drawable = false;
         
     }
@@ -16,7 +16,7 @@ class Board {
         const row = document.createElement("div")
         row.classList.add("pixel-row")
         for (let j=0; j<45; j++) {
-            const rPixel = new RoundedPixel(this.globalStore, this, `${rowIndex}_${j}`, 20, 20, "", 5)
+            const rPixel = new RoundedPixel(this.globalStore, this, `${rowIndex}_${j}`, 10, 10, "", 3)
             row.appendChild(rPixel.getPixel())
         }
         return row;
@@ -36,27 +36,27 @@ class Board {
 
 
     _enableEventListeners(domRef){
-        domRef.addEventListener('mousedown', (e)=>{
+        domRef.addEventListener('pointerdown', (e)=>{
             e.preventDefault()
-            this.mousedown = true;
+            this.pointerdown = true;
         })
         
-        domRef.addEventListener("mouseup", (e)=>{
+        domRef.addEventListener("pointerup", (e)=>{
             e.preventDefault()
-            this.mousedown = false
+            this.pointerdown = false
         })
-        domRef.addEventListener('mousemove', (e)=>{
+        domRef.addEventListener('pointermove', (e)=>{
             e.preventDefault()
-            this.mousemove = true
+            this.pointermove = true
         })
         
     }
 
     draw(){
-        if(!this.mousedown) {
+        if(!this.pointerdown) {
             this.drawable = false;
         }
-        else if(this.mousedown && this.mousemove) {
+        else if(this.pointerdown && this.pointermove) {
             //console.log('drawable')
             this.drawable = true;
         } else {
