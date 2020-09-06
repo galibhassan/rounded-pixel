@@ -47,3 +47,8 @@ saveLossless_button.addEventListener("click", (e)=>{
 
     Utils.downloadObjectAsJson(pxData, filename.value)
 })
+
+
+// project loading
+const projectLoaderDomRef = document.getElementById("loadProject")
+const projectLoader = new ProjectLoader(projectLoaderDomRef)
