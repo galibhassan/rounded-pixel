@@ -29,3 +29,19 @@ saveButton.addEventListener("click", (e)=> {
 
     });
 })
+
+
+
+const saveLossless_button = document.getElementById("saveLossless_button")
+saveLossless_button.addEventListener("click", (e)=>{
+    const pixels = Array.from(document.querySelectorAll("[data-pxid]"))
+    const pxData = pixels.map((px)=>{
+        return {
+            pxid: px.getAttribute("data-pxid"),
+            pxColor: px.style.backgroundColor
+        }
+    })
+    const filename = document.querySelector(".save-lossless-filename")
+
+    Utils.downloadObjectAsJson(pxData, filename.value)
+})
