@@ -29,10 +29,11 @@ body {
 
 .rounded-pixel {
     margin: 1px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 2px;
+    
+    /* border-top-left-radius: 0px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px; */
 }
 
 .pixel-row {

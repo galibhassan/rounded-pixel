@@ -23,7 +23,7 @@ class Utils {
             rgb: {
                 r, g, b
             },
-            hex: rgbToHex(r, g, b)
+            hex: this.rgbToHex(r, g, b)
         }
     }
 
@@ -43,6 +43,10 @@ class Utils {
     }
     // ----------------------------------------------
     
+
+    static rgbToHex(r, g, b) {
+        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
 }
 
 
@@ -54,9 +58,6 @@ function componentToHex(c) {
     return hex.length == 1 ? "0" + hex : hex;
 }
 
-function rgbToHex(r, g, b) {
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-}
 // ----------------------------------------------
 
 

@@ -2,9 +2,9 @@ class Board {
     constructor(parentDiv, store) {
         this.globalStore = store;
         this.parentDiv = parentDiv;
-        this.cellWidth = 10;
-        this.cellHeight = 10;
-        // this.borderRadius = parseInt(this.cellWidth*0.25)+1;
+        this.cellWidth = 20;
+        this.cellHeight = 20;
+        this.borderRadius = parseInt(this.cellWidth*0.25)+1;
         this.cellMargin = 1;
 
         this._enableEventListeners(this.parentDiv)
@@ -14,7 +14,7 @@ class Board {
         this.drawable = false;
         
         this.addRowsToBoard()
-        // this.getD()
+        console.log(this.getDim())
     }
 
     getPixRow(rowIndex) {
@@ -50,10 +50,9 @@ class Board {
     getDim() {
         const w = this.parentDiv.offsetWidth
         const h = this.parentDiv.offsetHeight
-        return {
-            nRows: parseInt(w / (this.cellWidth + 2 * this.cellMargin)),
-            nCols: parseInt(h / (this.cellHeight + 2 * this.cellMargin))
-        }
+        const nRows = parseInt(w / (this.cellWidth + 2 * this.cellMargin));
+        const nCols = parseInt(h / (this.cellHeight + 2 * this.cellMargin));
+        return {nRows, nCols}
     }
     handleBoardResize() {
 

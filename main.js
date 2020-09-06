@@ -10,9 +10,13 @@ const update = () => {
 }
 update()
 
+const colorPicker_brush = document.getElementById("colorPicker_brush")
+colorPicker_brush.value = Utils.rgbToHex(236, 156, 65)
 
 // change background color
 const colorPicker_board = document.getElementById("colorPicker_board");
+// initial value
+colorPicker_board.value = Utils.rgbToHex(120,110, 100)
 colorPicker_board.addEventListener("input", (e)=>{
     canvas.style.backgroundColor = colorPicker_board.value
 })
