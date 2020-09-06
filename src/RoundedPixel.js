@@ -10,6 +10,7 @@ class RoundedPixel {
         this.board = board;
 
         this.eyeDropperEnabled = false;
+        this.eraserEnabled = false;
     }
 
     getPixel() {
@@ -45,8 +46,15 @@ class RoundedPixel {
             {
                 e.preventDefault()
                 if (this.board.drawable) {
-                    const currentColor = this.globalStore.getCurrentColor()
-                    this.setColor(currentColor)
+                    if (!this.eraserEnabled) {
+                        const currentColor = this.globalStore.getCurrentColor()
+                        this.setColor(currentColor)
+                    } else {
+                        const currentColor = null;
+                        this.setColor(currentColor)
+                        // console.log(this.eraserEnabled)
+                    }
+
                 }
             }
         });
@@ -54,8 +62,14 @@ class RoundedPixel {
             {
                 e.preventDefault()
                 if (!this.eyeDropperEnabled) {
-                    const currentColor = this.globalStore.getCurrentColor()
-                    this.setColor(currentColor)
+                    if(!this.eraserEnabled) {
+                        const currentColor = this.globalStore.getCurrentColor()
+                        this.setColor(currentColor)
+                    } else {
+                        const currentColor = null;
+                        this.setColor(currentColor)
+                    }
+
                 } else {
                     // pick color
                     const pickedColor = domRef.style.backgroundColor;
@@ -72,6 +86,10 @@ class RoundedPixel {
                 this.eyeDropperEnabled = true;
             } else {
                 this.eyeDropperEnabled = false;
+            }
+
+            if(e.key === "e") {
+                this.eraserEnabled = !this.eraserEnabled;
             }
         })
 
