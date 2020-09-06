@@ -9,3 +9,13 @@ const update = () => {
     requestAnimationFrame(update)
 }
 update()
+
+
+// save
+const saveButton = document.getElementById("saveButton");
+saveButton.addEventListener("click", (e)=> {
+    html2canvas(canvas, {backgroundColor: null})
+    .then(canvasOut => {
+        document.body.appendChild(canvasOut)
+    });
+})

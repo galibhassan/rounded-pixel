@@ -7,4 +7,8 @@ class Store {
         return this.colorPicker.value;
     }
 
+    setColor(newColor){
+        this.colorPicker.value = newColor;
+    }
+
 }

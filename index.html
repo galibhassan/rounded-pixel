@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rounded Pixels</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
-<body>
+<body ondrag="return false;" ondrop="return false" >
     <h2>Rounded Pixels</h2>
     <div class="container">
         <div class="colorPickerWraper">
@@ -19,6 +20,9 @@
         </div>
     </div>
 
+    <button id="saveButton">
+        save
+    </button>
 
     <script src="./src/RoundedPixel.js"></script>
     <script src="./src/board.js"></script>

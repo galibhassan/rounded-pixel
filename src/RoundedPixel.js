@@ -8,6 +8,8 @@ class RoundedPixel {
         this.borderRadius = borderRadius;
         this.pxid = pxid;
         this.board = board;
+
+        this.altKeyDown = false;
     }
 
     getPixel() {
@@ -41,6 +43,7 @@ class RoundedPixel {
     _enableEventListeners(domRef) {
         domRef.addEventListener('mouseover', (e) => {
             {
+                e.preventDefault()
                 if (this.board.drawable) {
                     const currentColor = this.globalStore.getCurrentColor()
                     this.setColor(currentColor)
@@ -49,10 +52,35 @@ class RoundedPixel {
         });
         domRef.addEventListener('mousedown', (e) => {
             {
-                const currentColor = this.globalStore.getCurrentColor()
-                this.setColor(currentColor)
+                e.preventDefault()
+                if (!this.altKeyDown) {
+                    const currentColor = this.globalStore.getCurrentColor()
+                    this.setColor(currentColor)
+                } else {
+                    // pick color
+                    const pickedColor = domRef.style.backgroundColor;
+                    console.log(pickedColor)
+                    this.globalStore.setColor(pickedColor)
 
+                }
             }
         });
+
+        document.body.addEventListener('keydown', (e) => {
+            e.preventDefault()
+            if (e.key === "Alt") {
+                this.altKeyDown = true;
+            } else {
+                this.altKeyDown = false;
+            }
+        })
+
+        document.body.addEventListener('keyup', (e) => {
+            e.preventDefault()
+            this.altKeyDown = false;
+        })
+
+
+
     }
 }

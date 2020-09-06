@@ -16,7 +16,7 @@ class Board {
         const row = document.createElement("div")
         row.classList.add("pixel-row")
         for (let j=0; j<45; j++) {
-            const rPixel = new RoundedPixel(this.globalStore, this, `${rowIndex}_${j}`, 20, 20, "white", 5)
+            const rPixel = new RoundedPixel(this.globalStore, this, `${rowIndex}_${j}`, 20, 20, "", 5)
             row.appendChild(rPixel.getPixel())
         }
         return row;
@@ -37,19 +37,26 @@ class Board {
 
     _enableEventListeners(domRef){
         domRef.addEventListener('mousedown', (e)=>{
+            e.preventDefault()
             this.mousedown = true;
         })
-
+        
         domRef.addEventListener("mouseup", (e)=>{
+            e.preventDefault()
             this.mousedown = false
         })
         domRef.addEventListener('mousemove', (e)=>{
+            e.preventDefault()
             this.mousemove = true
         })
+        
     }
 
     draw(){
-        if(this.mousedown && this.mousemove) {
+        if(!this.mousedown) {
+            this.drawable = false;
+        }
+        else if(this.mousedown && this.mousemove) {
             //console.log('drawable')
             this.drawable = true;
         } else {
