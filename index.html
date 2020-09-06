@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,26 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
+
 <body ondragstart="return false;">
     <h2>Rounded Pixels</h2>
     <div class="container">
         <div class="colorPickerWraper">
-            <input type="color" id="colorPicker">
+            <div>
+                <label for="">Brush color</label>
+                <input type="color" id="colorPicker_brush">
+            </div>
+            <div>
+                <label for="">Canvas color</label>
+                <input type="color" id="colorPicker_board">
+            </div>
+
+
+
         </div>
-        <div class="canvas-wrapper">            
+        <div class="canvas-wrapper">
             <div class="canvas">
-                
+
             </div>
         </div>
     </div>
@@ -31,4 +43,5 @@
     <script src="./main.js"></script>
 
 </body>
+
 </html>

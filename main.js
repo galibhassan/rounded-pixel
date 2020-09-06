@@ -11,6 +11,12 @@ const update = () => {
 update()
 
 
+// change background color
+const colorPicker_board = document.getElementById("colorPicker_board");
+colorPicker_board.addEventListener("input", (e)=>{
+    canvas.style.backgroundColor = colorPicker_board.value
+})
+
 // save
 const saveButton = document.getElementById("saveButton");
 saveButton.addEventListener("click", (e)=> {

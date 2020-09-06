@@ -1,14 +1,14 @@
 class Store {
     constructor(){
-        this.colorPicker = document.getElementById("colorPicker")
+        this.colorPicker_brush = document.getElementById("colorPicker_brush")
     }
 
     getCurrentColor(){
-        return this.colorPicker.value;
+        return this.colorPicker_brush.value;
     }
 
     setColor(newColor){
-        this.colorPicker.value = newColor;
+        this.colorPicker_brush.value = newColor;
     }
 
 }
