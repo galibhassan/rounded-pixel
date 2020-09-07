@@ -2,8 +2,8 @@ class Board {
     constructor(parentDiv, store) {
         this.globalStore = store;
         this.parentDiv = parentDiv;
-        this.cellWidth = 20;
-        this.cellHeight = 20;
+        this.cellWidth = 10;
+        this.cellHeight = 10;
         this.borderRadius = parseInt(this.cellWidth*0.25)+1;
         this.cellMargin = 1;
 
@@ -23,7 +23,7 @@ class Board {
         row.style.flexDirection = "row";
 
         row.classList.add("pixel-row")
-        for (let j = 0; j < this.getDim().nRows; j++) {
+        for (let j = 0; j < this.getDim().nRows +1; j++) {
             const rPixel = new RoundedPixel(
                 this.globalStore, 
                 this, 
@@ -41,7 +41,7 @@ class Board {
 
 
     addRowsToBoard() {
-        for (let i = 0; i < this.getDim().nCols; i++) {
+        for (let i = 0; i < this.getDim().nCols +1; i++) {
             let row = this.getPixRow(i)
             this.parentDiv.appendChild(row)
         }
