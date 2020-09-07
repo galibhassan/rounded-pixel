@@ -2,9 +2,9 @@ class Board {
     constructor(parentDiv, store) {
         this.globalStore = store;
         this.parentDiv = parentDiv;
-        this.cellWidth = 40;
-        this.cellHeight = 40;
-        this.borderRadius = parseInt(this.cellWidth*0.25)+1;
+        this.cellWidth = this.globalStore.pixelSize.width;
+        this.cellHeight = this.globalStore.pixelSize.height;
+        this.borderRadius = parseInt(this.cellWidth*0.15+1);
         this.cellMargin = 1;
 
         this._enableEventListeners(this.parentDiv)
@@ -13,7 +13,7 @@ class Board {
         this.pointerdown = false;
         this.drawable = false;
         
-        this.addRowsToBoard()
+        this.generateGrid()
         console.log(this.getDim())
     }
 
@@ -41,10 +41,17 @@ class Board {
 
 
     addRowsToBoard() {
+        this.parentDiv.innerHTML = null;
         for (let i = 0; i < this.getDim().nCols +1; i++) {
             let row = this.getPixRow(i)
             this.parentDiv.appendChild(row)
         }
+    }
+
+    generateGrid(){
+        this.cellWidth = globalStore.pixelSize.width;
+        this.cellHeight = globalStore.pixelSize.height;
+        this.addRowsToBoard()
     }
 
     getDim() {

@@ -3,6 +3,10 @@ class Store {
         this.colorPicker_brush = document.getElementById("colorPicker_brush")
         this.colorPicker_fillEmptyPixels = document.getElementById("colorPicker_fillEmptyPixels")
         this.brushSize = 2
+        this.pixelSize = {
+            width: 20,
+            height: 20
+        }
     }
 
     getCurrentColor() {

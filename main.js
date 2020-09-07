@@ -1,6 +1,17 @@
 const canvas = document.querySelector(".canvas");
+const pxWidthInput = document.getElementById("pxWidthInput")
+const pxHeightInput = document.getElementById("pxHeightInput")
+const button_regenerateGrid = document.querySelector(".button_regenerateGrid")
+
 const globalStore = new Store()
 const myBoard = new Board(canvas, globalStore)
+
+
+// initial pixel size
+pxWidthInput.value = 20
+pxHeightInput.value = 20
+globalStore.pixelSize.width = pxWidthInput.value;
+globalStore.pixelSize.height = pxHeightInput.value;
 
 
 // drawing loop
@@ -56,3 +67,21 @@ button_fillEmptyPixels.addEventListener("click", (e)=>{
         }
     })
 })
+
+
+
+
+button_regenerateGrid.addEventListener("click", (e)=>{
+    let confirmation = window.confirm(`
+        Your drawing will be lost!
+        Still proceed?
+    `)
+
+    if(confirmation) {
+        globalStore.pixelSize.width= parseInt(pxWidthInput.value),
+        globalStore.pixelSize.height= parseInt(pxHeightInput.value)
+        myBoard.generateGrid()
+    }
+})
+// initial click
+// button_regenerateGrid.click()
