@@ -10,17 +10,71 @@
 </head>
 
 <body ondragstart="return false;">
-    <h2>Rounded Pixels</h2>
-    <div class="container">
-        <div class="colorPickerWraper">
+    <div class="sidebar">
+        <header>
+            <div class="title">Rounded Pixels</div>
+            <div class="author">Galib Hassan</div>
+        </header>
+
+        <div class="ui">
+            <div class="ui-title-bar">
+                ui
+            </div>
+            <div class="ui-content">
+
+
             <div>
                 <label for="">Brush color</label>
+                <br>
                 <input type="color" id="colorPicker_brush">
             </div>
             <div>
+                <div>Eraser toggle</div>
+                <div>E</div>
+            </div>
+            <div>
+                <div>Color picker</div>
+                <div>Alt </div>
+            </div>
+
+            <div>
                 <label for="">Canvas color</label>
+                <br>
                 <input type="color" id="colorPicker_board">
             </div>
+            
+            <div class="fill-empty-pixels-wrapper">
+                <input type="color" id="colorPicker_fillEmptyPixels" value="#1D8160">
+                <br>
+                <button id="button_fillEmptyPixels">
+                    Fill empty pixels
+                </button>
+            </div>
+
+            
+            <div class="save-raster-wrapper">
+                <input type="text" class="save-png-filename" value="myArt.png">
+                <br>
+                <button id="saveButton">
+                    save png
+                </button>
+            </div>
+            
+
+
+            <div class="save-lossless-wrapper">
+                <input type="text" class="save-lossless-filename" value="myArt">
+                <br>
+                <button id="saveLossless_button">
+                    save lossless
+                </button>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="colorPickerWraper">
 
 
 
@@ -30,28 +84,6 @@
 
             </div>
         </div>
-    </div>
-
-    <div class="save-raster-wrapper">        
-        <input type="text" class="save-png-filename" value="myArt.png">
-        <button id="saveButton">
-            save png
-        </button>
-    </div>
-    
-    
-    <div class="save-lossless-wrapper">
-        <input type="text" class="save-lossless-filename" value="myArt">
-        <button id="saveLossless_button">
-            save lossless
-        </button>
-    </div>
-
-    <div class="fill-empty-pixels-wrapper">
-        <input type="color" id="colorPicker_fillEmptyPixels" value="#1D8160">
-        <button id="button_fillEmptyPixels">
-            Fill empty pixels 
-        </button>
     </div>
 
 

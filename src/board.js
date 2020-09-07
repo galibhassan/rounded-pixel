@@ -2,8 +2,8 @@ class Board {
     constructor(parentDiv, store) {
         this.globalStore = store;
         this.parentDiv = parentDiv;
-        this.cellWidth = 10;
-        this.cellHeight = 10;
+        this.cellWidth = 40;
+        this.cellHeight = 40;
         this.borderRadius = parseInt(this.cellWidth*0.25)+1;
         this.cellMargin = 1;
 
