@@ -36,14 +36,23 @@ saveButton.addEventListener("click", (e)=> {
 
 const saveLossless_button = document.getElementById("saveLossless_button")
 saveLossless_button.addEventListener("click", (e)=>{
-    const pixels = Array.from(document.querySelectorAll("[data-pxid]"))
-    const pxData = pixels.map((px)=>{
-        return {
-            pxid: px.getAttribute("data-pxid"),
-            pxColor: px.style.backgroundColor
+    
+    const filename = document.querySelector(".save-lossless-filename")
+    const pxData = globalStore.getPixelDataForEntireBoard()
+    Utils.downloadObjectAsJson(pxData, filename.value)
+})
+
+const button_fillEmptyPixels = document.getElementById("button_fillEmptyPixels")
+button_fillEmptyPixels.addEventListener("click", (e)=>{
+    const currentFillColor = globalStore.getCurrentColor_fillEmptyPixels();
+
+    console.log(currentFillColor)
+    const pxData = globalStore.getPixelDataForEntireBoard()
+    pxData.forEach(px=>{
+        if(px.pxColor==="") {
+            const currentPxDomRef = document.querySelector(`[data-pxid="${px.pxid}"]`)
+            console.log(currentFillColor)
+            currentPxDomRef.style.backgroundColor = `${currentFillColor}`
         }
     })
-    const filename = document.querySelector(".save-lossless-filename")
-
-    Utils.downloadObjectAsJson(pxData, filename.value)
 })
