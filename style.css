@@ -78,6 +78,7 @@ body {
 
 .rounded-pixel {
     margin: 1px;
+    border-radius: 5px;
 
     /* border-top-left-radius: 0px;
     border-top-right-radius: 7px;
@@ -100,4 +101,8 @@ button{
 .pixel-size-wrapper > input {
     width: 30px;
     font-size: 10px
+}
+
+.roundedness-slider-value{
+    font-weight: 900;
 }
