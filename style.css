@@ -64,16 +64,33 @@ body {
     width: 100%;
     height: 100%;
     /*     border: 1px solid rgb(0, 255, 13); */
-    display: flex;
+    /* display: flex; */
+    position: relative;
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
+.ref-image-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.ref-image{
+    width: auto;
+    height: 100%;
+}
+
 .canvas {
     /* border: 1px solid red; */
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 .rounded-pixel {
