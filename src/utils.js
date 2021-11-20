@@ -71,6 +71,16 @@ function invNormalize(sliderMin,sliderMax,intervalMin,intervalMax, x) {
     const y = m*x + (y0 - m*x0);
     return y;
 }
+function normalize(sliderMin,sliderMax,intervalMin,intervalMax, x) {
+    const y0 = sliderMin;
+    const y1 = sliderMax;
+    const x0 = intervalMin;
+    const x1 = intervalMax;
+
+    const m = (y1-y0)/(x1-x0);
+    const y = m*x + (y0 - m*x0);
+    return y;
+}
 
 
 // test
