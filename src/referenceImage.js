@@ -12,9 +12,11 @@ const slider_refImgOpacity = document.querySelector("#slider-ref-img-opacity");
 // init
 console.log(refImg.src)
 refImg.src = "";
+refImg.style.display = "none";
 slider_refImgOpacity.value = 100;
 
 bt_loadRefImg.addEventListener("click", (e)=>{
+    refImg.style.display = "block"
     refImg.src = refImgURL.value;
 })
 
