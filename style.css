@@ -49,6 +49,33 @@ body {
     border-top-left-radius: 5px;
 }
 
+.bt-ref-img-move-container{
+    /* border: 1px solid rebeccapurple; */
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.bt-ref-img-move-container > div > button{
+    width: 20px;
+    text-align: center;
+}
+
+
+.bt-ref-img-move-row1{
+    display: flex;
+    justify-content: center;
+}
+.bt-ref-img-move-row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bt-ref-img-move-row3{
+    display: flex;
+    justify-content: center;
+}
+
+
 .container {
 /*     border: 1px solid rgb(0, 204, 255);*/
     width: 90%;
@@ -69,6 +96,7 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 .ref-image-container{
     width: 100%;

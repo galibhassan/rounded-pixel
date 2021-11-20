@@ -63,16 +63,25 @@
             </div>
 
             <div class="reference-image-controls-wrapper">
+                <hr>
                 <div>Reference Image:</div>
                 <div>URL</div>
                 <input id="ref-img-url"  type="text">
                 <button id="button_load_reference_image">Load</button>
-                <div>
-                    <button id="bt_ref-img-move-up">up</button>
-                    <button id="bt_ref-img-move-down">down</button>
-                    <button id="bt_ref-img-move-left">left</button>
-                    <button id="bt_ref-img-move-right">right</button>
+
+                <div class="bt-ref-img-move-container">
+                    <div class="bt-ref-img-move-row1">
+                        <button class="bt-ref-img-move" id="bt_ref-img-move-up">&#8593;</button>
+                    </div>
+                    <div class="bt-ref-img-move-row2">
+                        <button class="bt-ref-img-move" id="bt_ref-img-move-left">&#8592;</button>
+                        <button class="bt-ref-img-move" id="bt_ref-img-move-right">&#8594;</button>
+                    </div>
+                    <div class="bt-ref-img-move-row3">
+                        <button class="bt-ref-img-move" id="bt_ref-img-move-down">&#8595;</button>
+                    </div>
                 </div>
+                <hr>
             </div>
 
             <div class="fill-empty-pixels-wrapper">
