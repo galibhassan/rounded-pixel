@@ -61,6 +61,17 @@ function componentToHex(c) {
 // ----------------------------------------------
 
 
+function invNormalize(sliderMin,sliderMax,intervalMin,intervalMax, x) {
+    const x0 = sliderMin;
+    const x1 = sliderMax;
+    const y0 = intervalMin;
+    const y1 = intervalMax;
+
+    const m = (y1-y0)/(x1-x0);
+    const y = m*x + (y0 - m*x0);
+    return y;
+}
+
 
 // test
 //rgb2nrgb("rgb(235, 239, 255)")
