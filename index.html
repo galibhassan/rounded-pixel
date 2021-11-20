@@ -27,11 +27,17 @@
             <div class="ui-content">
 
             <div class="pixel-size-wrapper">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <div>Pixel size</div>
                 <label for=""></label>
                 Width: <input type="number" min="7" id="pxWidthInput" >
                 <br>
-                Height: <input type="number" min="7" id="pxHeightInput">
+                Height: <input type="number" min="7" id="pxHeightInput"> <br>
                 <button class="button_regenerateGrid">Regenerate Grid</button>
 
             </div>
@@ -40,8 +46,8 @@
                 <div>Roundedness: <span class="roundedness-slider-value"></span> </div>
                 <input type="range" class="pixel-border-radius-control" min="0" max="20">
             </div>
-            
             <div>
+                <hr>
                 <label for="">Brush color</label>
                 <br>
                 <input type="color" id="colorPicker_brush">
@@ -52,8 +58,8 @@
                     <br>
                     <input type="color" id="colorPicker_board">
                 </div>
-    
-            <div>
+                <div>
+                <hr>
                 <div>Eraser toggle</div>
                 <div><b>E</b></div>
             </div>
@@ -67,8 +73,16 @@
                 <div>Reference Image:</div>
                 <div>URL</div>
                 <input id="ref-img-url"  type="text">
+                <br>
                 <button id="button_load_reference_image">Load</button>
-                <input id="slider-ref-img-opacity" type="range">
+                <br>
+                <div>
+                    <hr>
+                    <div>
+                        opacity
+                    </div>
+                    <input id="slider-ref-img-opacity" type="range">
+                </div>
                 <div class="bt-ref-img-move-container">
                     <div>Move </div>
                     <div class="bt-ref-img-move-row1">
@@ -83,7 +97,7 @@
                     </div>
                     <br>
                     <div class="slider-ref-img-scale-wrapper">
-                        <div>Zoom </div>
+                        <div>Zoom </div><br>
                         <input id="slider-ref-img-scale" type="range">
                         <div><span id="ref-img-scale-value"></span>x</div>
                     </div>

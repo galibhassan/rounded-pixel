@@ -20,13 +20,13 @@ body {
 .ui{
     margin-top: 30px;
     /* border: 1px solid tomato; */
-    height: 70%;
+    height: 600px;
+    width: 120px;
+
     user-select: none;
-
-
-    
 }
 .ui-content{
+    overflow: auto;
     font-size: .7rem;
     padding-left: 8px;
     height: 100%;
@@ -34,7 +34,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly; 
-    background-color: rgb(224, 221, 221)
+    background-color: rgb(224, 221, 221);
+    width: 100%;
 }
 .ui-content > div{
 
