@@ -41,19 +41,3 @@ Save.args = {
   toolName: "save"
 };
 
-
-export const InsideToolBar = Template.bind({});
-InsideToolBar.args = {}
-InsideToolBar.decorators = [
-    (Story) => {
-      return (
-        <div style={{ height: "90vh" }}>
-          <ToolBar>
-            <ToolContainer>
-              <Story/>
-            </ToolContainer>
-          </ToolBar>
-        </div>
-      );
-    },
-  ]
