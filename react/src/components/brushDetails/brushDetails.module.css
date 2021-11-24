@@ -1,0 +1,29 @@
+.toolWrapper{
+  background-color: #f4f4f4;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  align-items: center;
+  font-size: small;
+}
+
+.toolTitle{
+  font-weight: bold;
+}
+
+.colorWrapper{
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(141, 87, 20); */
+  margin-left: 100px;
+  align-items: center;
+}
+.colorWrapper > input{
+  margin-left: 10px;
+  border: 0px;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
