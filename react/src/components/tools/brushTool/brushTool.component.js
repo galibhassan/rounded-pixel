@@ -1,12 +1,15 @@
 import classes from './brushTool.module.css'
+import {BsFillBrushFill} from 'react-icons/bs'
 
-const BrushTool = ()=>{
+const DEFAULT_TOOL_ICON_COLOR = "#898989"
+
+const BrushTool = ({toolIconColor})=>{
   return(
     <button>
-      {/* <FontAwesomeIcon
-        icon={faCoffee}
-      /> */}
-      hahaah
+      <BsFillBrushFill
+        size={25} 
+        color={toolIconColor || DEFAULT_TOOL_ICON_COLOR}
+      />
     </button>
   )
 }
