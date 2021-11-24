@@ -1,4 +1,4 @@
-import classes from "./brushTool.module.css";
+import classes from "./toolButton.module.css";
 import {
   BsFillBrushFill as BrushIcon,
   BsFillEraserFill as EraserIcon,
@@ -15,7 +15,7 @@ const TOOL_CONFIG = {
   color: DEFAULT_TOOL_ICON_COLOR,
 };
 
-const BrushTool = ({ toolIconColor, toolName }) => {
+export const ToolButton = ({ toolIconColor, toolName }) => {
   const handleClick = (e) => {
     console.log("Tool selected");
   };
@@ -45,5 +45,3 @@ const BrushTool = ({ toolIconColor, toolName }) => {
     </button>
   );
 };
-
-export default BrushTool;

@@ -1,15 +1,16 @@
 import React from 'react';
-import BrushTool from './brushTool.component';
-import { ToolBar } from '../../toolbar/toolbar.component';
-import { ToolContainer } from '../../toolContainer/toolContainer.component';
+import { ToolButton } from './toolButton.component';
+import {ToolBar} from '../toolbar/toolbar.component'
+import { ToolContainer } from '../toolContainer/toolContainer.component';
+
 
 export default {
-  title: 'Rounded Pixel/Tools/Brush',
-  component: BrushTool,
+  title: 'Rounded Pixel/Tools',
+  component: ToolButton,
   argTypes: {},
 };
 
-const Template = (args) => <BrushTool {...args} />;
+const Template = (args) => <ToolButton {...args} />;
 
 export const Brush = Template.bind({});
 Brush.args = {
