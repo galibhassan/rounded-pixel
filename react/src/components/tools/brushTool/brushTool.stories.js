@@ -11,11 +11,35 @@ export default {
 
 const Template = (args) => <BrushTool {...args} />;
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-
+export const Brush = Template.bind({});
+Brush.args = {
+  toolName: "brush"
 };
+export const Eraser = Template.bind({});
+Eraser.args = {
+  toolName: "eraser"
+};
+
+export const Grid = Template.bind({});
+Grid.args = {
+  toolName: "grid"
+};
+
+export const RefImage = Template.bind({});
+RefImage.args = {
+  toolName: "refImage"
+};
+
+export const Eyedropper = Template.bind({});
+Eyedropper.args = {
+  toolName: "eyedropper"
+};
+
+export const Save = Template.bind({});
+Save.args = {
+  toolName: "save"
+};
+
 
 export const InsideToolBar = Template.bind({});
 InsideToolBar.args = {}
