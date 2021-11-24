@@ -1,0 +1,9 @@
+.toolContainer{
+    width: 70%;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: coral; */
+}
