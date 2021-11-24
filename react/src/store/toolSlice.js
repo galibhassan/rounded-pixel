@@ -8,8 +8,8 @@ const toolSlice = createSlice({
   name: "toolState",
   initialState,
   reducers: {
-    selectTool(state, payload) {
-      state.activeTool = payload.toolName
+    selectTool(state, action) {
+      state.activeTool = action.payload.toolName
     }
   },
 });
