@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useSelector, useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { toolActions } from "../../store/toolSlice";
 
 import classes from "./toolButton.module.css";
@@ -19,57 +19,56 @@ const CLICKED_ICON_COLOR = "#9670D3";
 
 const INITIAL_TOOL_CONFIG = {
   size: 25,
-  color: DEFAULT_TOOL_ICON_COLOR,
-  selected: false,
 };
 
-export const ToolButton = ({ toolIconColor, toolName }) => {
+export const ToolButton = ({ toolName }) => {
   const [toolConfig, setToolConfig] = useState(INITIAL_TOOL_CONFIG);
-  const {activeTool} = useSelector(state=>state.toolReducer);
-  
-  const dispatch = useDispatch()
+  const [hasPointerEntered, setHasPointerEntered] = useState(false)
+  const { activeTool } = useSelector((state) => state.toolReducer);
+
+  const dispatch = useDispatch();
+
+  let toolColor;
+  if (activeTool !== toolName) {
+    if(hasPointerEntered) {
+      toolColor = HOVERED_ICON_COLOR
+    } else {
+      toolColor = DEFAULT_TOOL_ICON_COLOR
+    }
+  } else {
+    toolColor = CLICKED_ICON_COLOR
+  }
+
 
   const renderIcon = () => {
     switch (toolName) {
       case "brush":
-        return <BrushIcon {...toolConfig} />;
+        return <BrushIcon {...toolConfig} color={toolColor}/>;
       case "eraser":
-        return <EraserIcon {...toolConfig} />;
+        return <EraserIcon {...toolConfig} color={toolColor}/>;
       case "grid":
-        return <GridIcon {...toolConfig} />;
+        return <GridIcon {...toolConfig} color={toolColor}/>;
       case "refImage":
-        return <RefImageIcon {...toolConfig} />;
+        return <RefImageIcon {...toolConfig} color={toolColor}/>;
       case "eyedropper":
-        return <EyeDropperIcon {...toolConfig} />;
+        return <EyeDropperIcon {...toolConfig} color={toolColor}/>;
       case "save":
-        return <SaveIcon {...toolConfig} />;
+        return <SaveIcon {...toolConfig} color={toolColor}/>;
       default:
-        return <QuestionMarkIcon {...toolConfig} />;
+        return <QuestionMarkIcon {...toolConfig} color={toolColor}/>;
     }
   };
 
   const handlePointerEnter = (e) => {
-    !toolConfig.selected &&
-      setToolConfig({
-        ...toolConfig,
-        color: HOVERED_ICON_COLOR,
-      });
-  };
-  const handlePointerLeave = (e) => {
-    !toolConfig.selected &&
-      setToolConfig({
-        ...toolConfig,
-        color: DEFAULT_TOOL_ICON_COLOR,
-      });
+      setHasPointerEntered(true);
+    };
+    const handlePointerLeave = (e) => {
+      setHasPointerEntered(false)
   };
   const handleClick = (e) => {
-    setToolConfig({
-      ...toolConfig,
-      color: CLICKED_ICON_COLOR,
-      selected: true,
-    });
 
-    dispatch(toolActions.selectTool({toolName}))
+
+    dispatch(toolActions.selectTool({ toolName }));
   };
 
   return (
