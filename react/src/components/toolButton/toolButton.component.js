@@ -1,4 +1,7 @@
 import { useState } from "react";
+import {useSelector, useDispatch} from "react-redux";
+import { toolActions } from "../../store/toolSlice";
+
 import classes from "./toolButton.module.css";
 import {
   BsFillBrushFill as BrushIcon,
@@ -22,6 +25,9 @@ const INITIAL_TOOL_CONFIG = {
 
 export const ToolButton = ({ toolIconColor, toolName }) => {
   const [toolConfig, setToolConfig] = useState(INITIAL_TOOL_CONFIG);
+  const {activeTool} = useSelector(state=>state.toolReducer);
+  
+  const dispatch = useDispatch()
 
   const renderIcon = () => {
     switch (toolName) {
@@ -62,6 +68,8 @@ export const ToolButton = ({ toolIconColor, toolName }) => {
       color: CLICKED_ICON_COLOR,
       selected: true,
     });
+
+    dispatch(toolActions.selectTool({toolName}))
   };
 
   return (
