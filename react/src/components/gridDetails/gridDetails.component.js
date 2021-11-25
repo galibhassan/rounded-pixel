@@ -6,25 +6,22 @@ export const GridDetails = () => {
   return (
     <div className={classes.toolWrapper}>
       <div className={classes.toolTitle}>{TOOL_TITLE}</div>
-      
-      <div>
+
+      <div className={classes.toolChunkContainer}>
         <div>Pixel Width</div>
-        <input type="number"/>
+        <input className={classes.textInput + " " + classes.textInput_short} type="number" />
       </div>
-      <div>
+      <div className={classes.toolChunkContainer}>
         <div>Pixel Height</div>
-        <input type="number"/>
+        <input className={classes.textInput + " " + classes.textInput_short} type="number" />
       </div>
-      
-      <button>Regenerate Grid</button>
 
+      <button className={classes.buttonStandard}>Regenerate Grid</button>
 
-      <div>
+      <div className={classes.toolChunkContainer}>
         <div>Pixel Roundedness</div>
-        <input type="number"/>
+        <input className={classes.textInput + " " + classes.textInput_short} type="number" />
       </div>
-      
-
     </div>
   );
 };
