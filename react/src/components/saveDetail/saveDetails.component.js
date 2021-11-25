@@ -8,16 +8,23 @@ export const SaveDetails = () => {
       <div className={classes.toolTitle}>{TOOL_TITLE}</div>
 
       <div className={classes.toolChunkContainer}>
-        <input className={classes.textInput} type="text" placeholder="File name.." />
+        <input
+          className={classes.textInput}
+          type="text"
+          placeholder="File name.."
+        />
       </div>
       <form className={classes.toolChunkContainer}>
-        <input type="radio" name="png"/>
-        <label>PNG</label>
-        <input type="radio" name="json"/>
-        <label>JSON</label>
-
+        <div className={classes.toolChunkSub}>
+          <input type="radio" name="png" />
+          <label>PNG</label>
+        </div>
+        <div className={classes.toolChunkSub}>
+          <input type="radio" name="json" />
+          <label>JSON</label>
+        </div>
       </form>
-      <button className={classes.buttonStandard}> Load</button>
+      <button className={classes.buttonStandard}> Save</button>
     </div>
   );
 };
