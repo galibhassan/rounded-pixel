@@ -1,0 +1,131 @@
+.toolWrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: small;
+}
+
+.urlLoadContainer > input{
+  border: 0px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.158);
+  
+}
+
+.opacityContainer{
+}
+
+.zoomContainer{
+}
+.moveContainer{
+}
+
+.toolQuantifier{
+  font-size: x-small;
+  color: rgb(161, 161, 161);
+}
+
+.toolChunkContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 20px 0px 20px;
+  /* background-color: aquamarine; */
+}
+.toolChunkContainer > :nth-child(n) {
+  margin: 0px 3px 0px 3px;
+}
+
+.moveArrowsContainer{
+  width: 90px;
+  max-height: 50px;
+  /* background-color: rgb(165, 211, 248); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.move_row1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.move_row2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: -7px;
+}
+.move_row3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -7px;
+}
+
+.moveIcon > svg{
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.3);
+}
+
+/* SLIDER ----- */
+.slider {
+  min-width: 50px;
+  max-width: 100px;
+  -webkit-appearance: none;
+  height: 3px;
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.3);
+  border-radius: 5px;  
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background: #9670D3;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.slider::-moz-range-thumb {
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #9670D3;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+
+
+.buttonStandard{
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
+  background-color: #E7457F;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  padding: 6px;
+  min-width: 70px;
+  font-size: x-small;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: x-small;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: x-small;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: x-small;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-size: x-small;
+}
