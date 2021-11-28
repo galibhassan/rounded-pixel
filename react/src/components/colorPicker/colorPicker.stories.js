@@ -18,4 +18,6 @@ export default {
 const Template = (args) => <ColorPicker {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  defaultColor: "#F6C0D8"
+};

@@ -2,10 +2,10 @@ import { createRef, useState } from "react";
 import classes from "./colorPicker.module.css";
 import { useSelector } from "react-redux";
 
-export const ColorPicker = () => {
+export const ColorPicker = ({defaultColor}) => {
   const { roundedness } = useSelector((state) => state.drawingReducer);
   const colorPickerRealRef = createRef();
-  const [colorPickerColor, setColorPickerColor] = useState("red");
+  const [colorPickerColor, setColorPickerColor] = useState(defaultColor || "red");
 
   const handleClickOnFake = (e) => {
     e.preventDefault();
