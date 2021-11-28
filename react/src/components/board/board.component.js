@@ -32,7 +32,6 @@ export const Board = ({ parentWidth, parentHeight, cellMargin }) => {
               cellMargin={cellMargin}
             />
           );
-          return <div>A</div>;
         })}
       </div>
     );

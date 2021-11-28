@@ -22,6 +22,12 @@ const drawingSlice = createSlice({
     },
     setPixelRoundedness(state,action) {
       state.roundedness = action.payload.roundedness
+    },
+    setPixelWidth(state, action){
+      state.pixelSize.width = action.payload.width
+    },
+    setPixelHeight(state, action){
+      state.pixelSize.height = action.payload.height
     }
   },
 });
