@@ -20,7 +20,7 @@ export const GridDetails = () => {
 
       <div className={classes.toolChunkContainer}>
         <div>Pixel Roundedness</div>
-        <input className={classes.textInput + " " + classes.textInput_short} type="number" />
+        <input type="range" className={classes.slider}/>
       </div>
     </div>
   );
