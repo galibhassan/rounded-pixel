@@ -21,6 +21,7 @@ export const Pixel = (props) => {
   const [pixelColor, setPixelColor] = useState("blue");
   const [isPointerDown, setIsPointerDown] = useState(false);
   const [isPointerEnter, setIsPointerEnter] = useState(false);
+  const [eyedropperColor, setEyedropperColor] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,6 +31,10 @@ export const Pixel = (props) => {
           setPixelColor(brushColor);
         } else if (activeTool === "eraser") {
           setPixelColor("transparent");
+        } else if (activeTool === "eyedropper") {
+          dispatch(
+            drawingActions.setBrushColor({ brushColor: eyedropperColor })
+          );
         }
       }
     }
@@ -38,6 +43,7 @@ export const Pixel = (props) => {
   const handlePointerDown = (e) => {
     e.preventDefault();
     setIsPointerDown(true);
+    setEyedropperColor(e.currentTarget.style.backgroundColor);
     dispatch(drawingActions.setIsDrawable({ isDrawable: true }));
   };
 
@@ -46,8 +52,10 @@ export const Pixel = (props) => {
     if (isDrawable) {
       if (activeTool === "brush") {
         setPixelColor(brushColor);
-      } else if(activeTool === "eraser") {
+      } else if (activeTool === "eraser") {
         setPixelColor("transparent");
+      } else if (activeTool === "eyedropper") {
+        dispatch(drawingActions.setBrushColor({ brushColor: eyedropperColor }));
       }
     }
   };
