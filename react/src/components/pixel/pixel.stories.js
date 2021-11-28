@@ -17,11 +17,47 @@ export default {
             <ToolButton toolName="save" />
             <ToolButton toolName="eraser" />
           </>
-          <Story/>
-          <Story/>
-          <Story/>
-          <Story/>
-          <Story/>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "3px",
+              width: 200,
+              height: 200,
+              backgroundColor: "lightgray",
+            }}
+          >
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+          </div>
         </div>
       );
     },
