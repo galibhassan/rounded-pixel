@@ -26,8 +26,10 @@ export const Pixel = (props) => {
   useEffect(() => {
     if (isDrawable) {
       if (isPointerDown) {
-        if(activeTool==="brush"){  
+        if (activeTool === "brush") {
           setPixelColor(brushColor);
+        } else if (activeTool === "eraser") {
+          setPixelColor("transparent");
         }
       }
     }
@@ -41,8 +43,12 @@ export const Pixel = (props) => {
 
   const handlePointerEnter = (e) => {
     e.preventDefault();
-    if (isDrawable && activeTool === "brush") {
-      setPixelColor(brushColor);
+    if (isDrawable) {
+      if (activeTool === "brush") {
+        setPixelColor(brushColor);
+      } else if(activeTool === "eraser") {
+        setPixelColor("transparent");
+      }
     }
   };
 
@@ -52,9 +58,9 @@ export const Pixel = (props) => {
   };
 
   const handlePointerLeave = (e) => {
-    e.preventDefault()
-    setIsPointerDown(false)
-  }
+    e.preventDefault();
+    setIsPointerDown(false);
+  };
 
   return (
     <div
