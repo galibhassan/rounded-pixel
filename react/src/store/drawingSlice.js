@@ -14,8 +14,10 @@ const drawingSlice = createSlice({
   initialState,
   reducers: {
     setIsDrawable(state, action) {
-      state.isDrawable = action.payload.isDrawable
-      console.log("isDrawable: " + state.isDrawable)
+      state.isDrawable = action.payload.isDrawable;
+    },
+    setBrushColor(state, action) {
+      state.brushColor = action.payload.brushColor;
     },
   },
 });
