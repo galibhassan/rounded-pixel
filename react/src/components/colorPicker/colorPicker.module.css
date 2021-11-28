@@ -1,0 +1,24 @@
+.colorPickerContainer {
+  position: relative;
+}
+
+.colorPickerFake {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: aqua;
+  width: 20px;
+  height: 20px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.colorPickerReal {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
