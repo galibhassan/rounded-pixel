@@ -14,7 +14,7 @@ export const Pixel = (props) => {
     borderRadius,
   } = props;
 
-  const { brushColor, isDrawable } = useSelector(
+  const { brushColor, isDrawable, roundedness } = useSelector(
     (state) => state.drawingReducer
   );
   const { activeTool } = useSelector((state) => state.toolReducer);
@@ -80,6 +80,7 @@ export const Pixel = (props) => {
         width,
         height,
         backgroundColor: pixelColor,
+        borderRadius: roundedness
       }}
     ></div>
   );

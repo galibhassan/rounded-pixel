@@ -1,6 +1,7 @@
 import React from "react";
 import { Pixel } from "./pixel.component";
 import { ToolButton } from "../toolButton/toolButton.component";
+import { RoundednessSlider } from "../roundednessSlider/roundednessSlider.component";
 
 export default {
   title: "Rounded Pixel/Pixel",
@@ -17,6 +18,7 @@ export default {
             <ToolButton toolName="save" />
             <ToolButton toolName="eraser" />
           </>
+          <RoundednessSlider/>
           <div
             style={{
               display: "flex",
