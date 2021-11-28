@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 
 export const ColorPicker = () => {
   const { roundedness } = useSelector((state) => state.drawingReducer);
-  console.log(roundedness)
   const colorPickerRealRef = createRef();
   const [colorPickerColor, setColorPickerColor] = useState("red");
 

@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { drawingActions } from "../../store/drawingSlice";
 
 export const Pixel = (props) => {
-  console.log("Pixel called");
   const {
     // globalStore,
     board,
