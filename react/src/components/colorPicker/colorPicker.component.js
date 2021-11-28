@@ -1,7 +1,10 @@
 import { createRef, useState } from "react";
 import classes from "./colorPicker.module.css";
+import { useSelector } from "react-redux";
 
 export const ColorPicker = () => {
+  const { roundedness } = useSelector((state) => state.drawingReducer);
+  console.log(roundedness)
   const colorPickerRealRef = createRef();
   const [colorPickerColor, setColorPickerColor] = useState("red");
 
@@ -29,6 +32,7 @@ export const ColorPicker = () => {
           onClick={handleClickOnFake}
           style={{
             backgroundColor: colorPickerColor,
+            borderRadius: roundedness
           }}
         ></div>
       </div>
