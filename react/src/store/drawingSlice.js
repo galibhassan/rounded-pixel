@@ -4,6 +4,7 @@ const initialState = {
   brushColor: "#F6C0D8",
   isDrawable: false,
   roundedness: 5,
+  pixelMargin:2,
   pixelSize: {
     width: 20,
     height: 20,
@@ -28,6 +29,9 @@ const drawingSlice = createSlice({
     },
     setPixelHeight(state, action){
       state.pixelSize.height = action.payload.height
+    },
+    setPixelMargin(state, action) {
+      state.pixelMargin = action.payload.pixelMargin
     }
   },
 });
