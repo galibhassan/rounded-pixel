@@ -73,5 +73,5 @@ Primary.args = {
   width: "20px",
   height: "20px",
   backgroundColor: "blue",
-  cellMargin: "2px"
+  pixelMargin: "2px"
 };

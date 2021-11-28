@@ -12,5 +12,5 @@ export const Primary = Template.bind({});
 Primary.args = {
   parentWidth: 300,
   parentHeight: 300,
-  cellMargin: 2
+  pixelMargin: 2
 };

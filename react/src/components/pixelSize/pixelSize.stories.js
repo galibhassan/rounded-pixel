@@ -13,7 +13,7 @@ export default {
         >
           <div style={{ width: "20%" }}></div>
           <Story />
-          <Board parentWidth={400} parentHeight={500} cellMargin={2} />
+          <Board parentWidth={400} parentHeight={500} pixelMargin={2} />
         </div>
       );
     },

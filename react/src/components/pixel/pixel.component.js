@@ -11,7 +11,7 @@ export const Pixel = (props) => {
     height,
     backgroundColor,
     borderRadius,
-    cellMargin
+    pixelMargin
   } = props;
 
   const { brushColor, isDrawable, roundedness } = useSelector(
@@ -81,7 +81,7 @@ export const Pixel = (props) => {
         height,
         backgroundColor: pixelColor,
         borderRadius: roundedness,
-        margin: cellMargin
+        margin: pixelMargin
       }}
     ></div>
   );

@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import { Pixel } from "../pixel/pixel.component";
 
 
-export const Board = ({ parentWidth, parentHeight, cellMargin }) => {
+export const Board = ({ parentWidth, parentHeight, pixelMargin }) => {
   const { pixelSize } = useSelector((state) => state.drawingReducer);
 
   const getBoardDimension = () => {
     const w = parentWidth;
     const h = parentHeight;
-    const nRows = parseInt(w / (pixelSize.width + 2 * cellMargin));
-    const nCols = parseInt(h / (pixelSize.height + 2 * cellMargin));
+    const nRows = parseInt(w / (pixelSize.width + 2 * pixelMargin));
+    const nCols = parseInt(h / (pixelSize.height + 2 * pixelMargin));
     return { nRows, nCols };
   };
 
@@ -29,7 +29,7 @@ export const Board = ({ parentWidth, parentHeight, cellMargin }) => {
               width={pixelSize.width + "px"}
               height={pixelSize.height + "px"}
               backgroundColor="lightgray"
-              cellMargin={cellMargin}
+              pixelMargin={pixelMargin}
             />
           );
         })}
