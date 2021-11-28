@@ -3,17 +3,16 @@ import classes from "./colorPicker.module.css";
 
 export const ColorPicker = () => {
   const colorPickerRealRef = createRef();
-  const [colorPickerColor, setColorPickerColor] = useState("red")
+  const [colorPickerColor, setColorPickerColor] = useState("red");
 
   const handleClickOnFake = (e) => {
     e.preventDefault();
-    console.log(colorPickerRealRef.current);
     colorPickerRealRef.current.click();
   };
 
-  const handleColorChange = (e)=>{
-    setColorPickerColor(colorPickerRealRef.current.value)
-  }
+  const handleColorChange = (e) => {
+    setColorPickerColor(colorPickerRealRef.current.value);
+  };
 
   return (
     <div>
@@ -29,7 +28,7 @@ export const ColorPicker = () => {
           className={classes.colorPickerFake}
           onClick={handleClickOnFake}
           style={{
-            backgroundColor: colorPickerColor
+            backgroundColor: colorPickerColor,
           }}
         ></div>
       </div>
