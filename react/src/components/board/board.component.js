@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { Pixel } from "../pixel/pixel.component";
 
 
-export const Board = ({ parentWidth, parentHeight, pixelMargin }) => {
-  const { pixelSize } = useSelector((state) => state.drawingReducer);
+export const Board = ({ parentWidth, parentHeight }) => {
+  const { pixelSize, pixelMargin } = useSelector((state) => state.drawingReducer);
 
   const getBoardDimension = () => {
     const w = parentWidth;
