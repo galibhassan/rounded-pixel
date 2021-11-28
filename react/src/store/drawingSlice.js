@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   brushColor: "red",
+  isDrawable: false,
   pixelSize: {
     width: 20,
     height: 20,
@@ -12,8 +13,9 @@ const drawingSlice = createSlice({
   name: "drawingState",
   initialState,
   reducers: {
-    myReducer(state, action) {
-      console.log(state.brushColor)
+    setIsDrawable(state, action) {
+      state.isDrawable = action.payload.isDrawable
+      console.log("isDrawable: " + state.isDrawable)
     },
   },
 });
