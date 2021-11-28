@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   brushColor: "red",
   isDrawable: false,
-  roundedness: 4,
+  roundedness: 5,
   pixelSize: {
     width: 20,
     height: 20,

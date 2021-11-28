@@ -23,6 +23,7 @@ export const RoundednessSlider = () => {
         type="range"
         className={classes.slider}
         onChange={handleRoundednessChange}
+        value={roundedness}
         min={0}
         max={20}
       />
