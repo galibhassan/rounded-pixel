@@ -1,0 +1,20 @@
+.toolChunkContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 20px 0px 20px;
+  /* background-color: aquamarine; */
+}
+.toolChunkContainer > :nth-child(n) {
+  margin: 0px 3px 0px 3px;
+}
+
+.toolChunkSub{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.textInput_short{
+  width: 50px;
+}
