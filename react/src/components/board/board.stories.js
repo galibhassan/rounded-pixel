@@ -11,5 +11,6 @@ const Template = (args) => <Board {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   parentWidth: 300,
-  parentHeight: 300
+  parentHeight: 300,
+  cellMargin: 2
 };

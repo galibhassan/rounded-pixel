@@ -2,9 +2,8 @@ import classes from "./board.module.css";
 import { useSelector } from "react-redux";
 import { Pixel } from "../pixel/pixel.component";
 
-const cellMargin = 2;
 
-export const Board = ({ parentWidth, parentHeight }) => {
+export const Board = ({ parentWidth, parentHeight, cellMargin }) => {
   const { pixelSize } = useSelector((state) => state.drawingReducer);
 
   const getBoardDimension = () => {
