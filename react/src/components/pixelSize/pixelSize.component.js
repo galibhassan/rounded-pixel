@@ -1,4 +1,5 @@
-import classes from "./pixelSize.module.css";
+import classesPixelSize from "./pixelSize.module.css";
+import classes from "../../commonStyle/toolDetailsCommon.module.css"
 
 import { useSelector, useDispatch } from "react-redux";
 import { drawingActions } from "../../store/drawingSlice";
