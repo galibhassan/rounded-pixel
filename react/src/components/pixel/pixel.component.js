@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { drawingActions } from "../../store/drawingSlice";
 
+const INITIAL_PIXEL_COLOR = "#e4e3e3"
+
 export const Pixel = (props) => {
   const {
     // globalStore,
@@ -18,7 +20,7 @@ export const Pixel = (props) => {
     (state) => state.drawingReducer
   );
   const { activeTool } = useSelector((state) => state.toolReducer);
-  const [pixelColor, setPixelColor] = useState("blue");
+  const [pixelColor, setPixelColor] = useState(INITIAL_PIXEL_COLOR);
   const [isPointerDown, setIsPointerDown] = useState(false);
   const [isPointerEnter, setIsPointerEnter] = useState(false);
   const [eyedropperColor, setEyedropperColor] = useState(null);
