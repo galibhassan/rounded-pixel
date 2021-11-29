@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  brushColor: "#F6C0D8",
+  brushColor: "#4EB4E2",
   isDrawable: false,
   roundedness: 5,
   pixelMargin:2,

@@ -1,8 +1,10 @@
 import { createRef, useState } from "react";
 import classes from "./colorPicker.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { drawingActions } from "../../store/drawingSlice";
 
-export const ColorPicker = ({defaultColor}) => {
+export const ColorPicker = ({defaultColor, actsOn, action}) => {
+  const dispatch = useDispatch()
   const { roundedness } = useSelector((state) => state.drawingReducer);
   const colorPickerRealRef = createRef();
   const [colorPickerColor, setColorPickerColor] = useState(defaultColor || "red");
@@ -14,6 +16,11 @@ export const ColorPicker = ({defaultColor}) => {
 
   const handleColorChange = (e) => {
     setColorPickerColor(colorPickerRealRef.current.value);
+    const payload = {
+      [`${actsOn}`]: colorPickerRealRef.current.value
+    }
+
+    dispatch(action(payload))
   };
 
   return (
