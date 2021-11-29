@@ -1,4 +1,5 @@
-import classes from "./brushDetails.module.css";
+import classes from "../../commonStyle/toolDetailsCommon.module.css";
+import classesBrush from "./brushDetails.module.css";
 
 const TOOL_TITLE = "Brush";
 
