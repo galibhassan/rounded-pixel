@@ -21,7 +21,7 @@ export const ToolDetails = () => {
   }
 
   return(
-    <div>
+    <div className={classes.toolDetailsContainer}>
       {renderToolDetails()}
     </div>
   )

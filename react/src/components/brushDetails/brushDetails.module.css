@@ -1,29 +1,29 @@
-.toolWrapper{
-  background-color: #f4f4f4;
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  font-family: sans-serif;
-  align-items: center;
-  font-size: small;
-}
-
 .toolTitle{
   font-weight: bold;
-}
-
-.colorWrapper{
+  background-color: rgb(139, 216, 190);
+  width: 10%;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  /* background-color: rgb(141, 87, 20); */
-  margin-left: 100px;
   align-items: center;
 }
-.colorWrapper > input{
-  margin-left: 10px;
-  border: 0px;
-  border-radius: 30px;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
+
+.toolDetailsWrapper{
+  background-color: rgb(255, 252, 75);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toolChunkContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 20px 0px 20px;
+  background-color: aquamarine;
+}
+.toolChunkContainer > :nth-child(n) {
+  margin: 0px 3px 0px 3px;
 }

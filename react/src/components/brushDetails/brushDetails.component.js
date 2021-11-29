@@ -4,12 +4,14 @@ const TOOL_TITLE = "Brush";
 
 export const BrushDetail = () => {
   return (
-    <div className={classes.toolWrapper}>
+    <>
       <div className={classes.toolTitle}>{TOOL_TITLE}</div>
-      <div className={classes.colorWrapper}>
-        <div>Color</div>
-        <input type="color" />
+      <div className={classes.toolDetailsWrapper}>
+        <div className={classes.toolChunkContainer}>
+          <div>Color</div>
+          <input type="color" />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
