@@ -9,6 +9,10 @@ const initialState = {
     width: 20,
     height: 20,
   },
+  boardContainerSize:{
+    width:20,
+    height:20
+  }
 };
 
 const drawingSlice = createSlice({
@@ -32,6 +36,9 @@ const drawingSlice = createSlice({
     },
     setPixelMargin(state, action) {
       state.pixelMargin = action.payload.pixelMargin
+    },
+    setBoardContainerSize(state, action) {
+      state.boardContainerSize = action.payload.boardContainerSize
     }
   },
 });
