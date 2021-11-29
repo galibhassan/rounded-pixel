@@ -1,10 +1,10 @@
-import classes from "./saveDetails.module.css";
+import classes from "../../commonStyle/toolDetailsCommon.module.css";
 
 const TOOL_TITLE = "Save Image";
 
 export const SaveDetails = () => {
   return (
-    <div className={classes.toolWrapper}>
+    <div className={classes.toolDetailsWrapper}>
       <div className={classes.toolTitle}>{TOOL_TITLE}</div>
 
       <div className={classes.toolChunkContainer}>
