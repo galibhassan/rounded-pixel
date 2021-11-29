@@ -3,6 +3,7 @@ import classes from "../../commonStyle/toolDetailsCommon.module.css"
 
 import { RoundednessSlider } from "../roundednessSlider/roundednessSlider.component";
 import { PixelSize } from "../pixelSize/pixelSize.component";
+import { PixelMarginController} from "../pixelMarginController/pixelMarginController.component"
 
 const TOOL_TITLE = "Grid";
 
@@ -18,6 +19,10 @@ export const GridDetails = () => {
 
       <div className={classes.toolChunkContainer}>
         <RoundednessSlider />
+      </div>
+
+      <div className={classes.toolChunkContainer}>
+        <PixelMarginController/>
       </div>
     </div>
   );
