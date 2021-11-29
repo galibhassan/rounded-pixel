@@ -1,11 +1,12 @@
 .toolBar{
     height: 100%;
-    width: 10%;
     min-width: 50px;
     max-width: 70px;
     background-color: #F1F1F1;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 2px 0px 10px 1px rgba(0,0,0,0.3);
+    /* background-color: aqua; */
+    z-index: 100;
 
     display: flex;
     flex-direction: column;
