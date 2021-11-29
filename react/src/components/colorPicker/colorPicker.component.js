@@ -17,7 +17,7 @@ export const ColorPicker = ({defaultColor}) => {
   };
 
   return (
-    <div>
+    <div className={classes.colorpickerGrandWrapper}>
       <div>Color</div>
       <div className={classes.colorPickerContainer}>
         <input
