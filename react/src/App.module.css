@@ -1,0 +1,61 @@
+.appComponent {
+  margin: 0px;
+  background-color: rgb(151, 115, 219);
+  width: 100vw;
+  height: 100vh;
+}
+.appContainer {
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.appRow_1 {
+  height: 10%;
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+}
+
+.logoContainer {
+  background-color: rgb(115, 107, 192);
+  width:15%;
+  height: 100%;
+}
+
+.toolDetailContainer{
+  background-color: rgb(151, 147, 187);
+  width: 75%;
+  height: 100%;
+}
+
+.menuContainer{
+  background-color: rgb(93, 212, 172);
+  width: 10%;
+  height: 100%;
+}
+
+.appRow_2 {
+  height: 90%;
+  width: 100%;
+  background-color: rgb(25, 160, 160);
+  display: flex;
+  flex-direction: row;
+}
+
+.toolBarContainer{
+  width: 5%;
+  background-color: rgb(109, 204, 241);
+}
+
+.boardContainer{
+  width: 95%;
+  background-color: rgb(241, 118, 109);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
