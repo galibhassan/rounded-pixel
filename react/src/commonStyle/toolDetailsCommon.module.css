@@ -1,6 +1,6 @@
 .toolTitle{
   font-weight: bold;
-  background-color: rgb(139, 216, 190);
+  /* background-color: rgb(139, 216, 190); */
   width: 10%;
   height: 100%;
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 .toolDetailsWrapper{
-  background-color: rgb(255, 252, 75);
+  /* background-color: rgb(255, 252, 75); */
   width: 90%;
   height: 100%;
   display: flex;
@@ -22,7 +22,7 @@
   flex-direction: row;
   align-items: center;
   margin: 0px 20px 0px 20px;
-  background-color: rgb(127, 197, 255);
+  /* background-color: rgb(127, 197, 255); */
 }
 .toolChunkContainer > :nth-child(n) {
   margin: 0px 3px 0px 3px;

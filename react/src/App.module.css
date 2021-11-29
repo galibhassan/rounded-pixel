@@ -1,6 +1,6 @@
 .appComponent {
   margin: 0px;
-  background-color: rgb(151, 115, 219);
+  /* background-color: rgb(115, 172, 219); */
   width: 100vw;
   height: 100vh;
 }
@@ -31,7 +31,7 @@
 }
 
 .toolDetailContainer{
-  background-color: rgb(151, 147, 187);
+  /* background-color: rgb(233, 255, 183); */
   width: 75%;
   height: 100%;
 }
