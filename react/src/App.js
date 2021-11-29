@@ -1,7 +1,7 @@
 import classes from "./App.module.css";
 import { Logo } from "./components/logo/logo.component";
 import { ToolDetails } from "./components/toolDetails/toolDetails.component";
-import { Board } from "./components/board/board.component";
+import {BoardContainer} from "./components/boardContainer/boardContainer.component"
 import { ToolBar } from "./components/toolbar/toolbar.component";
 import {ToolButton} from "./components/toolButton/toolButton.component"
 
@@ -29,9 +29,7 @@ function App() {
               <ToolButton toolName="save"/>
             </ToolBar>
           </div>
-          <div className={classes.boardContainer}>
-            <Board parentWidth={700} parentHeight={300} />
-          </div>
+            <BoardContainer/>
         </div>
       </div>
     </div>
