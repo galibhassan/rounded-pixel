@@ -5,10 +5,12 @@ import { BoardContainer } from "./components/boardContainer/boardContainer.compo
 import { ToolBar } from "./components/toolbar/toolbar.component";
 import { ToolButton } from "./components/toolButton/toolButton.component";
 import Drawer from "./components/drawer/drawer.component";
+import { GlobalEventListeners } from "./components/globalEventListener/globalEventListener.component";
 
 function App() {
   return (
     <div className={classes.appComponent}>
+      <GlobalEventListeners />
       <div className={classes.appContainer}>
         <div className={classes.appRow_1}>
           <div className={classes.logoContainer}>
