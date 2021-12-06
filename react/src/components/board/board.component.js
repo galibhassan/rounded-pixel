@@ -50,7 +50,7 @@ export const Board = ({ parentWidth, parentHeight }) => {
   };
 
   return (
-    <div>
+    <div id="mainCanvas">
       {/* {getBoardDimension().nRows} {getBoardDimension().nCols} */}
 
       {generateGrid()}
