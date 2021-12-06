@@ -16,7 +16,7 @@ export const Board = ({ parentWidth, parentHeight }) => {
 
   const getPixelRow = () => {
     const emptyPixelRow = [...Array(getBoardDimension().nRows).keys()];
-    console.log(emptyPixelRow);
+    // console.log(emptyPixelRow);
     return (
       <div
         className={classes.pixelRow}
@@ -39,7 +39,7 @@ export const Board = ({ parentWidth, parentHeight }) => {
 
   const generateGrid = () => {
     const emptyPixelCol = [...Array(getBoardDimension().nCols).keys()];
-    console.log(emptyPixelCol);
+    // console.log(emptyPixelCol);
     return (
       <div>
         {emptyPixelCol.map((item, index) => {

@@ -1,0 +1,24 @@
+.aboutDetailText {
+  margin-left: 40px;
+  font-size: small;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 30px;
+  text-align: justify;
+  column-width: 100px;
+}
+
+.boldText {
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.xSmallText{
+  font-size: x-small;
+  font-weight: bold;
+  opacity: 0.6;
+
+}

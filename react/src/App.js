@@ -28,8 +28,8 @@ function App() {
               <ToolButton toolName="eraser" />
               <ToolButton toolName="grid" />
               <ToolButton toolName="eyedropper" />
-              <ToolButton toolName="refImage" />
-              <ToolButton toolName="save" />
+              {/* <ToolButton toolName="refImage" />
+              <ToolButton toolName="save" /> */}
             </ToolBar>
           </div>
           <BoardContainer />

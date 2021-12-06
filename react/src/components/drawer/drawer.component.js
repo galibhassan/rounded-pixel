@@ -10,6 +10,9 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 
+import { toolActions } from "../../store/toolSlice";
+import { useDispatch } from "react-redux";
+
 import { FaHamburger as HamburgerIcon } from "react-icons/fa";
 // import { FaBars as HamburgerIcon } from "react-icons/fa";
 
@@ -21,6 +24,8 @@ export default function TemporaryDrawer() {
     right: false,
   });
 
+  const dispatch = useDispatch();
+
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -31,7 +36,12 @@ export default function TemporaryDrawer() {
 
     setState({ ...state, [anchor]: open });
   };
-  const text = "mew mew";
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    dispatch(toolActions.selectTool({ toolName: "about" }));
+  };
+
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
@@ -40,29 +50,13 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button key={text}>
-          <ListItemIcon>
-            <HamburgerIcon />
-          </ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItem>
-        <ListItem button key={text}>
-          <ListItemIcon>
-            <MailIcon />
-          </ListItemIcon>
-          <ListItemText primary="Foo" />
+        <ListItem button key="" onClick={handleClick}>
+          <ListItemIcon>{/* <MailIcon /> */}</ListItemIcon>
+          <ListItemText primary="About" />
         </ListItem>
       </List>
 
       <Divider />
-      <List>
-        <ListItem button key={text}>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <ListItemText primary="Bar" />
-        </ListItem>
-      </List>
     </Box>
   );
 

@@ -5,6 +5,7 @@ import { EyedropperDetails } from '../eyedropperDetails/eyedropperDetails.compon
 import {SaveDetails} from '../saveDetail/saveDetails.component'
 import {RefImageDetails} from '../refImageDetails/refImageDetails.component'
 import {GridDetails} from '../gridDetails/gridDetails.component'
+import { AboutDetails } from '../aboutDetails/aboutDetails.component'
 
 export const ToolDetails = () => {
   const {activeTool} = useSelector(state=>state.toolReducer)
@@ -16,6 +17,7 @@ export const ToolDetails = () => {
       case "save": return <SaveDetails/>;
       case "refImage": return <RefImageDetails/>;
       case "grid": return <GridDetails/>;
+      case "about": return <AboutDetails/>;
       default: return <BrushDetail/>
     }
   }
