@@ -11,6 +11,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 
 import { FaHamburger as HamburgerIcon } from "react-icons/fa";
+// import { FaBars as HamburgerIcon } from "react-icons/fa";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -70,7 +71,10 @@ export default function TemporaryDrawer() {
     <div>
       {
         <>
-          <Button onClick={toggleDrawer("right", true)}>mango</Button>
+          <Button onClick={toggleDrawer("right", true)}>
+            {""}
+            <HamburgerIcon size={25} />{" "}
+          </Button>
           <Drawer
             anchor={"right"}
             open={state[anchor]}
