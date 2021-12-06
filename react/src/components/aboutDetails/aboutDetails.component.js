@@ -13,7 +13,7 @@ export const AboutDetails = () => {
         using <span className={classesAboutDetails.boldText}>Redux</span> as the
         state management tool. A previous non-react (and not good-looking but more feature-heavy)
         version developped in plain JavaScript can be found{" "}
-        <a href="https://galibhassan.github.io/rounded-pixel">here</a>. Stay
+        <a href="https://galibhassan.github.io/rounded-pixel/js/old.html">here</a>. Stay
         tuned for updates!
         <br />- Galib Hassan,
         <div className={classesAboutDetails.xSmallText}>
