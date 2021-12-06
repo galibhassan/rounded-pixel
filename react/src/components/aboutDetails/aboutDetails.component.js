@@ -11,7 +11,7 @@ export const AboutDetails = () => {
         being developped in{" "}
         <span className={classesAboutDetails.boldText}>React.js</span>. I am
         using <span className={classesAboutDetails.boldText}>Redux</span> as the
-        state management tool. A previous non-react (and not good-looking)
+        state management tool. A previous non-react (and not good-looking but more feature-heavy)
         version developped in plain JavaScript can be found{" "}
         <a href="https://galibhassan.github.io/rounded-pixel">here</a>. Stay
         tuned for updates!
