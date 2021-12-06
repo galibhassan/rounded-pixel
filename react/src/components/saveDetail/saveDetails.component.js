@@ -3,10 +3,11 @@ import html2canvas from "html2canvas";
 import { useState } from "react";
 
 const TOOL_TITLE = "Save Image";
+const DEFAULT_FILENAME_FOR_SAVING = "your_rounded_pixel_art_" + (new Date())
 
 export const SaveDetails = () => {
 
-  const [filename, setFilename] = useState("your_rounded_pixel_art_" + (new Date()))
+  const [filename, setFilename] = useState(DEFAULT_FILENAME_FOR_SAVING)
 
   //temporary code
   const canvas = document.querySelector("#mainCanvas");
@@ -25,7 +26,12 @@ export const SaveDetails = () => {
   };
 
   const handleFileNameInput = (e) =>{
-    setFilename(e.currentTarget.value)
+    const currentFilename = e.currentTarget.value
+    if (currentFilename.trim() !== "") {
+      setFilename(e.currentTarget.value)
+    } else {
+      setFilename(DEFAULT_FILENAME_FOR_SAVING)
+    }
   }
 
   return (
@@ -42,7 +48,7 @@ export const SaveDetails = () => {
       </div>
       <form className={classes.toolChunkContainer}>
         <div className={classes.toolChunkSub}>
-          <input type="radio" name="png" />
+          <input type="radio" name="png"/>
           <label>PNG</label>
         </div>
         <div className={classes.toolChunkSub}>
