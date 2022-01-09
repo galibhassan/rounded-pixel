@@ -4,7 +4,7 @@ No more harsh sharp corners of pixels in pixel-art. Check it out!
 
 New (Work in Progress): https://galibhassan.github.io/rounded-pixel/
 
-Old: TBA
+Old: Copy [this folder](https://github.com/galibhassan/rounded-pixel/tree/master/js) and run the `old.html` file.
 
 ## Interface
 ![Interface](https://github.com/galibhassan/images/blob/master/Rounded-Pixel%20Interface-with-react.png?raw=true)
